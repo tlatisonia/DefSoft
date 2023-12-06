@@ -17,7 +17,8 @@ class StockType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('quantite')
+            ->add('quantite'
+            )
 
             ->add('Product', EntityType::class, [
                 'expanded' => false,
@@ -25,7 +26,7 @@ class StockType extends AbstractType
                 'class' => Products::class,
                 'multiple' => true,
                 'attr' => [
-                    'class' => 'select2'
+                    'class' => 'form-label mt-4'
                 ]
             ])
 
